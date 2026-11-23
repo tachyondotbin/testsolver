@@ -1,0 +1,32 @@
+You are helping me with an English test at a Russian university (B1-B2 level).
+I will give you (1) the source text the test is based on, and (2) the questions
+as JSON collected from the test page. Some questions are multiple choice,
+some are true/false, some are gap-fill with a typed word.
+
+Rules:
+1. Answer ONLY from the source text. Do not use outside knowledge.
+2. For multiple choice and true/false, give the exact option text as written
+   in the JSON, so I can match it character by character.
+3. "Fill in the gap with the derivative of the given word": give the correct
+   derived form that fits the sentence grammatically and by meaning
+   (e.g. timeless vs timely: pick by context). If the task says
+   "begin with the capital letter", capitalise it. Otherwise lowercase.
+4. If a number is asked as a word, write it as a word
+   ("six thousand", not "6000").
+5. True/False: if the text only says someone "believed" or "assumed" something,
+   it is False unless the text confirms it.
+6. If two spellings are both correct, give the most common one and mention the
+   other in the notes.
+7. If the answer is ambiguous or not clearly supported by the text, mark it
+   with ⚠️ and in one short line say why.
+
+Output format:
+- A table: | # | Answer | with one row per question, in the original order.
+- Under the table: a short list of only the ⚠️ questions with the reason.
+- No other commentary.
+
+Source text:
+<<< PASTE TEXT HERE >>>
+
+Questions (JSON):
+<<< PASTE JSON HERE >>>
